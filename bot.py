@@ -30,7 +30,7 @@ async def banpack(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if pack:
             banned_packs.add(pack)
             save_json(PACKS_FILE, banned_packs)
-            await update.message.reply_text(f"Стикерпак "{pack}" заблокирован.")
+            await update.message.reply_text(f'Стикерпак "{pack}" заблокирован.')
         else:
             await update.message.reply_text("У стикера нет названия пака.")
     else:

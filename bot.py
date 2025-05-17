@@ -52,10 +52,9 @@ async def listpacks(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not banned_packs:
         await update.message.reply_text("Нет заблокированных стикерпаков.")
     else:
-        msg = "Заблокированные паки:
-" + "\n".join(f"• {p}" for p in banned_packs)
+        msg = "Заблокированные паки:\n" + "\n".join(f"• {p}" for p in banned_packs)
         await update.message.reply_text(msg)
-
+        
 async def bangif(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if update.message.reply_to_message and update.message.reply_to_message.animation:
         file_id = update.message.reply_to_message.animation.file_unique_id

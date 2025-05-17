@@ -42,7 +42,7 @@ async def unbanpack(update: Update, context: ContextTypes.DEFAULT_TYPE):
         if pack in banned_packs:
             banned_packs.remove(pack)
             save_json(PACKS_FILE, banned_packs)
-            await update.message.reply_text(f"Стикерпак "{pack}" разблокирован.")
+            await update.message.reply_text(f'Стикерпак "{pack}" разблокирован.')
         else:
             await update.message.reply_text("Этот пак не был заблокирован.")
     else:
